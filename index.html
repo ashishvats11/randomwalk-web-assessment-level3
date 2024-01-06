@@ -7,29 +7,34 @@
     <title>Tic Tac Toe</title>
 </head>
 <body>
-
     <h1 class="heading">Tic Tac Toe</h1>
-    
 
-    <div id="symbol-selection">
-        <div>
-        <p>Choose your symbol:</p>
+    <!-- Player Name Input -->
+    <div class="player-inputs">
+        <input type="text" id="playerXName" placeholder="Enter Player X Name">
+        <input type="text" id="playerOName" placeholder="Enter Player O Name">
+        <button onclick="setPlayerNames()">Start Game</button>
     </div>
-    <div>
-        <button onclick="startGame('X')">X</button>
-        <button onclick="startGame('O')">O</button>
-    </div>
-    </div>
-    
+
+
+
+<p class="turn-display" id="turnDisplay" style="display: none;">Turn: <span id="currentTurn">X</span></p>
+
+
+    <!-- Game Board -->
     <div id="container">
         <div id="board"></div>
     </div>
 
+
+<div class="btn-container">
+
+    <button id="restartButton" onclick="restartGame()" style="display: none;">Restart Game</button>
+</div>
+
+    <!-- Scorecard -->
     <p class="score">Score:</p>
     <div id="scorecard">Player X: 0 | Player O: 0</div>
-
-
-   
 
     <script src="script.js"></script>
 </body>
