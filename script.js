@@ -73,7 +73,7 @@ function handleCellClick(event) {
         setTimeout(() => {
             alert(`${currentPlayer === 'X' ? playerXName : playerOName} wins!`);
             updateScorecard();
-        }, 500); // Delay of 500 milliseconds
+        }, 500); 
         turnDisplay.style.display = 'block';
         restartButton.style.display = 'block';
         return;
@@ -81,7 +81,7 @@ function handleCellClick(event) {
         gameActive = false;
         setTimeout(() => {
             alert('Draw!');
-        }, 500); // Delay of 500 milliseconds
+        }, 500); 
         turnDisplay.style.display = 'block';
         restartButton.style.display = 'block';
         return;
