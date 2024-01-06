@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-color: black ;
+    
+    
+}
+
+.heading{
+    margin-top: 1.5cm;
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:cornsilk ;
+    font-size: 80px;
+}
+
+.score{
+    color:cornsilk;
+    font-size: 32px;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5cm;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-gap: 5px;
+    margin-bottom: 20px; 
+    
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    font-size: 4em;
+    /* border: 2px solid lightslategray; */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Set the text color to white */
+    background-color: grey;
+    
+    
+}
+
+#scorecard {
+    font-size: 1.5em;
+    color: antiquewhite;
+}
+
+#symbol-selection {
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 20px;
+    color: cornsilk;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    font-size: 26px;
+}
+
+#symbol-selection p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#symbol-selection button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.btn{
+    cursor: pointer;
+    margin-top: 2cm;
+    border: 4px solid cornsilk;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger  ;
+    border-radius: 10px;
+    padding: 4px;
+    transition-duration: 500ms;
+
+}
+
+.btn:hover{
+    transform:scale(1.2) ;
+    
+    
+}
+
+.restart-button {
+    padding: 2px;
+    background-color: cornsilk;
+    margin-top: 1cm;
+    padding: 5px;
+    border-radius: 9px;
+    transition: transform 0.5s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+
+}
+
+.restart-button:hover {
+    transform: scale(1.2);
+}
+
+@media only screen and (max-width: 600px) {
+    #board {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5em;
+    }
+
+    #symbol-selection button {
+        font-size: 0.9em;
+        padding: 4px 8px;
+    }
+    .heading{
+        font-size:45px ;
+    }
+    .score{
+        font-size: 25px;
+    }
+}
