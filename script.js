@@ -30,8 +30,9 @@ function startGame() {
     updateScorecard();
     createBoard();
     updateCurrentTurnDisplay();
-    turnDisplay.style.display = 'none';
-    restartButton.style.display = 'none';
+    turnDisplay.style.display = 'inline';
+    restartButton.style.display = 'inline';
+    document.querySelector('.player-inputs').style.display = 'none';
 }
 
 // Create the board
@@ -76,6 +77,7 @@ function handleCellClick(event) {
         }, 500); 
         turnDisplay.style.display = 'block';
         restartButton.style.display = 'block';
+        updateScorecard();
         return;
     } else if (board.every(cell => cell !== '')) {
         gameActive = false;
@@ -128,4 +130,3 @@ function restartGame() {
     turnDisplay.style.display = 'block';
     restartButton.style.display = 'block';
 }
-
